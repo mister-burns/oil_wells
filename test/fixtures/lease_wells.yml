@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  lease_id: 1
+  well_id: 1
+
+two:
+  lease_id: 1
+  well_id: 1

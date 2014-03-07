@@ -1,0 +1,29 @@
+<h1>Listing leases</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th><%= sortable "lease_name", "Name" %></th>
+      <th>Lease Number</th>
+      <th>Wells</th>
+      <th>Operators</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @leases.each do |lease| %>
+      <tr>
+        <td><%= link_to lease.name, lease %></td>
+        <td><%= lease.lease_number %></td>
+        <td><%= lease.wells.count %></td>
+        <td><%= lease.operators.count %></td>
+        <td><%= link_to 'Edit', edit_lease_path(lease) %></td>
+        <td><%= link_to 'Destroy', lease, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= will_paginate @leases %>
+<br>
+
+<%= link_to 'New Lease', new_lease_path %>

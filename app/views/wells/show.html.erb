@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Tracking number:</strong>
+  <%= @well.tracking_number %>
+</p>
+
+<p>
+  <strong>Api number:</strong>
+  <%= @well.api_number %>
+</p>
+
+<p>
+  <strong>Operator name:</strong>
+  <%= @well.operators.name %>
+</p>
+
+<%= link_to 'Edit', edit_well_path(@well) %> |
+<%= link_to 'Back', wells_path %>

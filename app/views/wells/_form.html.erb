@@ -1,0 +1,25 @@
+<%= form_for(@well) do |f| %>
+  <% if @well.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@well.errors.count, "error") %> prohibited this well from being saved:</h2>
+
+      <ul>
+      <% @well.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :tracking_number %><br>
+    <%= f.text_field :tracking_number %>
+  </div>
+  <div class="field">
+    <%= f.label :api_number %><br>
+    <%= f.text_field :api_number %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="1511959024">
+    <data-source source="LOCAL" name="Rails oil_wells: development" uuid="dba26dfa-498f-4c0f-826a-9d636aec0cb0">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:oil_wells_development</jdbc-url>
+      <user-name>jgoldstein</user-name>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails oil_wells: test" uuid="b1f651a8-361d-49a4-92f0-7d5ac749a7f6">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:oil_wells_test</jdbc-url>
+      <user-name>jgoldstein</user-name>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails oil_wells: production" uuid="f5bc6f60-8c84-445a-a12b-f3b69f40e47c">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:oil_wells_production</jdbc-url>
+      <user-name>jgoldstein</user-name>
+      <libraries />
+    </data-source>
+  </component>
+</project>
+

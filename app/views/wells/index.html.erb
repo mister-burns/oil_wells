@@ -1,0 +1,41 @@
+<h1>Listing wells</h1>
+Well Count: <%= @wells.count %>
+<table>
+  <thead>
+    <tr>
+      <th>Tracking number</th>
+      <th>Api number</th>
+      <th>Operator name</th>
+      <th><%= sortable "submit_date", "Submit Date" %></th>
+      <th>Well Number</th>
+      <th>Lease Name</th>
+      <th>Lease Number</th>
+      <th>Packet Type</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @wells.each do |well| %>
+      <tr>
+        <td><%= link_to well.tracking_number, "http://webapps.rrc.state.tx.us/CMPL/viewPdfReportFormAction.do?method=cmplW2FormPdf&packetSummaryId=#{well.tracking_number}" %></td>
+        <td><%= well.api_number %></td>
+        <td><%= link_to well.operators.pluck(:name).join(", ").try(:titleize), operator_path(well.operators.pluck(:id)) %></td>
+        <td><%= well.submit_date %></td>
+        <td><%= well.well_number %></td>
+        <td><%= well.leases.pluck(:name).join(", ").try(:titleize) %></td>
+        <td><%= well.leases.pluck(:lease_number).join(", ") %></td>
+        <td><%= well.packet_type %></td>
+        <td><%= link_to 'Show', well %></td>
+        <td><%= link_to 'Edit', edit_well_path(well) %></td>
+        <td><%= link_to 'Destroy', well, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= will_paginate @wells %>
+<br>
+
+<%= link_to 'New Well', new_well_path %>

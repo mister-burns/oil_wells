@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source source="LOCAL" name="Rails oil_wells: development" uuid="dba26dfa-498f-4c0f-826a-9d636aec0cb0">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails oil_wells: test" uuid="b1f651a8-361d-49a4-92f0-7d5ac749a7f6">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails oil_wells: production" uuid="f5bc6f60-8c84-445a-a12b-f3b69f40e47c">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+</component>

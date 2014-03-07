@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  tracking_number: MyString
+  api_number: MyString
+  operator_name: MyString
+
+two:
+  tracking_number: MyString
+  api_number: MyString
+  operator_name: MyString

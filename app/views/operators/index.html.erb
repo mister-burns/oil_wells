@@ -1,0 +1,29 @@
+<h1>Listing Operators</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th><%= sortable "name", "Name" %></th>
+      <th>Operator Number</th>
+      <th>Wells</th>
+      <th>Leases</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @operators.each do |operator| %>
+      <tr>
+        <td><%= link_to operator.name, operator %></td>
+        <td><%= operator.operator_number %></td>
+        <td><%= operator.wells.count %></td>
+        <td><%= operator.leases.count %></td>
+        <td><%= link_to 'Edit', edit_operator_path(operator) %></td>
+        <td><%= link_to 'Destroy', operator, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table><br>
+<%= will_paginate @operators %>
+<br>
+
+<%= link_to 'New Operator', new_operator_path %>
